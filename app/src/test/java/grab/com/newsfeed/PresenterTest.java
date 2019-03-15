@@ -28,7 +28,6 @@ public class PresenterTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         when(apiInterface.getFeed("us", "apiKey")).thenReturn(Observable.just(new Feed()));
-        presenter = Mockito.spy(new Presenter());
         apiInterface.getFeed("us", "apiKey");
     }
 
